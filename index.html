@@ -24,10 +24,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="#">Ristorante con fusion</a>
+            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="45"></a>
             <div class="collapse navbar-collapse" id="Navbar">
             <ul class="navbar-nav mr-auto">
-                <li class="navbar-item active"><a class="nav-link " href="#"><span class="fa fa-info fa-lg"></span>  Home</a></li>
+                <li class="navbar-item active"><a class="nav-link " href="#"><span class="fa fa-home fa-lg"></span>  Home</a></li>
                 <li class="navbar-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About us</a></li>
                 <li class="navbar-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lf"></span> menu</a></li>
                 <li class="navbar-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
@@ -44,7 +44,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 offset-1 col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm align-self-center text-white">
+                    <button class="btn bg-warning"><a href="#card" class="text-dark"><h3>Reserve Table</h3></a></button>
                 </div>
             </div>
         </div>
@@ -52,12 +56,20 @@
 
     <div class="container">
         <div class="row row-content align-items-center">
-            <div class="col-12  col-sm-4">
+            <div class="col-12 order-sm-last col-sm-4">
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div class="col-12  col-sm">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+            <div class="col-12 order-sm-first col-sm">
+                <div class="media">
+                    <img src="img/uthappizza.png" class="mr-3 d-flex img-thumbnail align-self-center" alt="uthappizza">
+                    <div class="media-body">
+                        <h2 class="mt-0">Uthappizza
+                            <span class="badge badge-danger">HOT</span>
+                            <span class="badge badge-pill badge-secondary">$4.99</span>
+                        </h2>
+                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>        
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -66,23 +78,82 @@
             <div class="col-12 col-sm-4">
                 <h3>This Month's Promotions</h3>
             </div>
+
             <div class="col-12 col-sm">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class="media">
+                    <div class="media-body">
+                <h2>Weekend Grand Buffet 
+                    <span class="badge badge-danger"> NEW</span>
+                </h2>
+                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p></div>
+                <img src="img/Buffet.png" class="mr-3 d-flex align-self-center" alt="buffet">
+                </div>
             </div>
         </div>
 
         <div class="row row-content align-items-center"> 
-            <div class="col-12 col-sm-4 col-md-3">
+            <div class="col-12 order-sm-last col-sm-4 col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
-            <div class="col-12 col-sm col-md">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+            <div class="col-12 col-sm order-sm-first col-md">
+                <div class="media">
+                    <img src="img/Alberto.png" class="mr-3 d-flex img-thumbnail align-items-center" alt="Alberto">
+                    <div class="media-body">
+                        <h2>Alberto Somayya</h2>
+                       <h4>Executive Chef</h4>
+                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="row row-content">
+            <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="card" id="card">
+                <h3 class="card-header text-white bg-warning">Reserve Table</h3>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-2" for="noguest">Number of Guests</label>
+                            <div class="col-1">
+                            <input type="radio" name="noguest" id="1" value="1">
+                            <label for="1">1</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="2" value="2">
+                            <label for="2">2</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="3" value="3">
+                            <label for="3">3</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="1" value="1">
+                            <label for="4">4</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="4" value="4">
+                            <label for="1">5</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="5" value="5">
+                            <label for="5">5</label> 
+                            </div>             
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-2" form="datetime"> Date and Time :</label>
+                            <input type="date" name="Date" id="date" class="form-control col-4"  placeholder="date">
+                            <span class="offset-1"></span>
+                            <input type="time" name="Time" id="time" class="form-control col-4" placeholder="time">
+                        </div>
+                        <div class="form-group row">
+                            <div >
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div></div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        </div>
     </div>
+
+
 
     <footer class="footer">
         <div class="container">
