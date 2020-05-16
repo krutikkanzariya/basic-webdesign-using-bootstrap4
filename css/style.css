@@ -56,3 +56,8 @@ body{
   height: 300px;
 }
 
+#carouselbutton{
+	right:0px;
+	position: absolute;
+	bottom: 0px;
+}

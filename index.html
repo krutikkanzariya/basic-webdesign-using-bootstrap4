@@ -74,8 +74,7 @@
             
         </div>
     </div>
-
-
+    
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -87,14 +86,68 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center text-white">
-                    <button class="btn bg-warning"><a href="#card" class="text-dark"
-                        data-toggle="tooltip" data-html="true" title="Or Call Us on <br><strong>+852 1234 5678</strong>"
-                        data-placement="bottom" 
-                        ><h3>Reserve Table</h3></a></button>
+                    <button class="btn bg-warning"><a data-target="#reservetable"
+                        data-toggle="modal"><h3>Reserve Table</h3></a></button>
                 </div>
             </div>
         </div>
     </header>
+    <div class="modal fade" id="reservetable" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Reserve Table</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-2" for="noguest">Number of Guests</label>
+                            <div class="col-1">
+                            <input type="radio" name="noguest" id="1" value="1">
+                            <label for="1">1</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="2" value="2">
+                            <label for="2">2</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="3" value="3">
+                            <label for="3">3</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="1" value="1">
+                            <label for="4">4</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="4" value="4">
+                            <label for="1">5</label>
+                            </div><div class="col-1">
+                            <input type="radio" name="noguest" id="5" value="5">
+                            <label for="5">5</label> 
+                            </div>             
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-12 col-md-2 col-form-label" for="section">Section</label>
+                            <div class="col-12 col-md-4">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-danger"><input type="radio" name="options" id="option1" autocomplete="off" checked>Non-smoking</label>
+                                <label class="btn btn-success" name="options" id="option2" autocomplete="off">Smoking</label>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-2" for="datetime"> Date and Time:</label>
+                            <input type="date" name="Date" id="date" class="form-control col-4"  placeholder="date">
+                            <span class="offset-1"></span>
+                            <input type="time" name="Time" id="time" class="form-control col-4" placeholder="time">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12 offset-2">
+                             <button type="button" class="btn btn-secondary btn-sm mr-auto" data-dismiss="modal">Cancel</button>   
+                            <button type="submit" class="btn btn-primary btn-sm mr-1">Reserve</button>
+                        </div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -142,59 +195,20 @@
                         <a href="#mycarousel" class="carousel-control-next" role="buttom" data-slide="next">
                              <span class="carousel-control-next-icon"></span>
                         </a>
+                        <div class="btn-group" id="carouselbutton">
+                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                <span class="fa fa-pause"></span>
+                            </button>
+                            <button class="btn btn-success btn-sm" id="carousel-play">
+                                <span class="fa fa-play"></span>
+                            </button>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
 
-
-        <div></div>
-        <div class="row row-content">
-            <div class="col-sm-3"></div>
-        <div class="col-sm-6">
-            <div class="card" id="card">
-                <h3 class="card-header text-white bg-warning">Reserve Table</h3>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group row">
-                            <label class="col-12 col-sm-2" for="noguest">Number of Guests</label>
-                            <div class="col-1">
-                            <input type="radio" name="noguest" id="1" value="1">
-                            <label for="1">1</label>
-                            </div><div class="col-1">
-                            <input type="radio" name="noguest" id="2" value="2">
-                            <label for="2">2</label>
-                            </div><div class="col-1">
-                            <input type="radio" name="noguest" id="3" value="3">
-                            <label for="3">3</label>
-                            </div><div class="col-1">
-                            <input type="radio" name="noguest" id="1" value="1">
-                            <label for="4">4</label>
-                            </div><div class="col-1">
-                            <input type="radio" name="noguest" id="4" value="4">
-                            <label for="1">5</label>
-                            </div><div class="col-1">
-                            <input type="radio" name="noguest" id="5" value="5">
-                            <label for="5">5</label> 
-                            </div>             
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-12 col-sm-2" form="datetime"> Date and Time :</label>
-                            <input type="date" name="Date" id="date" class="form-control col-4"  placeholder="date">
-                            <span class="offset-1"></span>
-                            <input type="time" name="Time" id="time" class="form-control col-4" placeholder="time">
-                        </div>
-                        <div class="form-group row">
-                            <div >
-                            <button type="submit" class="btn btn-primary">Reserve</button>
-                        </div></div>
-                    </form>
-                </div>
-            </div>
-            
-        </div>
-        </div>
     </div>
 
 
@@ -244,10 +258,16 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script >
+    <script>
         $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        })
+            $("#carouselbutton").carousel({interval:100});
+            $("#carousel-pause").click(function(){
+                $("mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("mycarousel").carousel('cycle');
+            });
+        });
     </script>
 </body>
 
