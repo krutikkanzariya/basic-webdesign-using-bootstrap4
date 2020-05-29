@@ -17,8 +17,6 @@
 </head>
 
 <body>
-
-
     <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -33,7 +31,7 @@
                 <li class="navbar-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginmodal">
+                <a id="startmodal">
                     <span class="fa fa-sign-in"></span> Log in
                 </a>
             </span>
@@ -64,7 +62,7 @@
                                 <label class="form-group">Remember</label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mr-1">
                              <button type="button" data-dismiss="modal" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
                              <button type="submit" class="btn btn-primary btn-sm ml-2">Sign in</button>
                         </div>
@@ -86,8 +84,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center text-white">
-                    <button class="btn bg-warning"><a data-target="#reservetable"
-                        data-toggle="modal"><h3>Reserve Table</h3></a></button>
+                    <button class="btn bg-warning"><a id="reservetablemodal"><h3>Reserve Table</h3></a></button>
                 </div>
             </div>
         </div>
@@ -195,14 +192,11 @@
                         <a href="#mycarousel" class="carousel-control-next" role="buttom" data-slide="next">
                              <span class="carousel-control-next-icon"></span>
                         </a>
-                        <div class="btn-group" id="carouselbutton">
-                            <button class="btn btn-danger btn-sm" id="carousel-pause">
+                        
+                            <button class="btn btn-danger btn-sm" id="carouselbutton">
                                 <span class="fa fa-pause"></span>
                             </button>
-                            <button class="btn btn-success btn-sm" id="carousel-play">
-                                <span class="fa fa-play"></span>
-                            </button>
-                        </div>
+                            
                     </div>
 
                 </div>
@@ -258,17 +252,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#carouselbutton").carousel({interval:100});
-            $("#carousel-pause").click(function(){
-                $("mycarousel").carousel('pause');
-            });
-            $("#carousel-play").click(function(){
-                $("mycarousel").carousel('cycle');
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
